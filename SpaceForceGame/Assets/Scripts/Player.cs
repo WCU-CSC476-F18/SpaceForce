@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 
-    // States for 
+    // States for bank animations
     const int STATE_IDLE = 0;
     const int STATE_RIGHT = 1;
     const int STATE_LEFT = -1;
@@ -17,10 +17,14 @@ public class Player : MonoBehaviour {
     private Vector2 bounds = new Vector2(7.2f,9.1f);
     Animator animator;
     GameObject exhaust;
+    GameObject muzzleFlash;
+    private bool hasFired = false;
 
     public float moveSpeed = 15f;
     public bool canMove = true;
     public float shieldHealth = 100;
+    public GameObject bullet;
+    public float bulletSpeed = 30f; // speed of bullets
 
     int _currentState = STATE_IDLE;
 
@@ -28,6 +32,7 @@ public class Player : MonoBehaviour {
     {
         animator = this.transform.Find("Ship").gameObject.GetComponent<Animator>();
         exhaust = this.transform.Find("Exhaust").gameObject;
+        muzzleFlash = this.transform.Find("MuzzleFlash").gameObject;
     }
 
     public void Update()
@@ -38,6 +43,23 @@ public class Player : MonoBehaviour {
 
     public void Move()
     {
+        // Handles user movement and firing
+
+        // Listen for player input and FIRE
+        if (Input.GetButton("Fire1"))
+        {
+            muzzleFlash.SetActive(true);
+            if(!hasFired)
+            {
+                fire();
+                Invoke("resetFire", 0.1f);
+                hasFired = true;
+            }
+        }
+        else
+            muzzleFlash.SetActive(false);
+
+        // Calculate new location
         var keyBoardX = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;
         var xPos = transform.position.x + keyBoardX;
         var keyBoardY = Input.GetAxis("Vertical") * Time.deltaTime * moveSpeed;
@@ -59,6 +81,7 @@ public class Player : MonoBehaviour {
         else
             exhaust.transform.localScale = new Vector3(1, THRUST_HALF, 1);
 
+        // Don't leave the play field
         if (xPos > bounds.x)
             xPos = bounds.x;
         else if (xPos < -bounds.x)
@@ -68,6 +91,7 @@ public class Player : MonoBehaviour {
         else if (yPos < -bounds.y)
             yPos = -bounds.y;
 
+        // Update location
         transform.position = new Vector2(xPos, yPos);
     }
 
@@ -79,5 +103,17 @@ public class Player : MonoBehaviour {
 
         animator.SetInteger("state", state);
         _currentState = state;
+    }
+
+    private void resetFire()
+    {
+        hasFired = false;
+    }
+
+    private void fire()
+    {
+        GameObject shot = Instantiate(bullet, muzzleFlash.transform.position, bullet.transform.rotation);
+        Rigidbody2D rb = shot.GetComponent<Rigidbody2D>();
+        rb.velocity = new Vector2(0, bulletSpeed);
     }
 }

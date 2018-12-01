@@ -8,6 +8,16 @@ TextureImporter:
     21300006: Muzzle_flashes_3
     21300008: Muzzle_flashes_4
     21300010: Muzzle_flashes_5
+    21300012: Muzzle_flashes_6
+    21300014: Muzzle_flashes_7
+    21300016: Muzzle_flashes_8
+    21300018: Muzzle_flashes_9
+    21300020: Muzzle_flashes_10
+    21300022: Muzzle_flashes_11
+    21300024: Muzzle_flashes_12
+    21300026: Muzzle_flashes_13
+    21300028: Muzzle_flashes_14
+    21300030: Muzzle_flashes_15
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -109,7 +119,7 @@ TextureImporter:
         width: 20
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -124,12 +134,12 @@ TextureImporter:
       name: Muzzle_flashes_1
       rect:
         serializedVersion: 2
-        x: 194
-        y: 179
-        width: 42
-        height: 69
+        x: 195
+        y: 183
+        width: 38
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -169,7 +179,7 @@ TextureImporter:
         width: 35
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -184,10 +194,10 @@ TextureImporter:
       name: Muzzle_flashes_4
       rect:
         serializedVersion: 2
-        x: 132
-        y: 102
-        width: 77
-        height: 66
+        x: 123
+        y: 101
+        width: 96
+        height: 62
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -209,13 +219,213 @@ TextureImporter:
         width: 22
         height: 58
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 7c1d38470095a9e4c8a873e85a642f6f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muzzle_flashes_6
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 163
+        width: 30
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9395aacf4c4d8e46993923151e6550f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muzzle_flashes_7
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 175
+        width: 28
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65f9d70bd3570e64783577df1959503f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muzzle_flashes_8
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 179
+        width: 33
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bd5f8caf2f0f0f4dbcb20d0dc07318c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muzzle_flashes_9
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 233
+        width: 16
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b665ec14fb3507c429eb5dd588698477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muzzle_flashes_10
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 115
+        width: 43
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 476b0ff3b4526374fbae4b35dfc48f00
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muzzle_flashes_11
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 65
+        width: 41
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adb8124dd1a6e06428e37836aa630918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muzzle_flashes_12
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 66
+        width: 41
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da9f5e944f986eb41a264336ff0b70f1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muzzle_flashes_13
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 40
+        width: 41
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcc82b5d327fb974b827e69736903a51
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muzzle_flashes_14
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 37
+        width: 41
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee99f270558405c46a265a1a690bb4bb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muzzle_flashes_15
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 15
+        width: 43
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc6df9c77cae1f74cb32a0284106731d
       vertices: []
       indices: 
       edges: []
