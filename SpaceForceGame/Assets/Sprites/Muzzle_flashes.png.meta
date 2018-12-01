@@ -1,15 +1,13 @@
 fileFormatVersion: 2
-guid: 7a3cc792ee44ccf4b96d9b9643868670
+guid: 8fcc5d18bd545834e859d847f779e10d
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Engine_exhaust1_frames_0
-    21300002: Engine_exhaust1_frames_1
-    21300004: Engine_exhaust1_frames_2
-    21300006: Engine_exhaust1_frames_3
-    21300008: Engine_exhaust1_frames_4
-    21300010: Engine_exhaust1_frames_5
-    21300012: Engine_exhaust1_frames_6
-    21300014: Engine_exhaust1_frames_7
+    21300000: Muzzle_flashes_0
+    21300002: Muzzle_flashes_1
+    21300004: Muzzle_flashes_2
+    21300006: Muzzle_flashes_3
+    21300008: Muzzle_flashes_4
+    21300010: Muzzle_flashes_5
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -103,161 +101,121 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Engine_exhaust1_frames_0
+      name: Muzzle_flashes_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 28
-        height: 91
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+        x: 219
+        y: 153
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e95616198fdbfff4284a48506bab4e6c
+      spriteID: 3e90fa5a5520cae40950eaa4fab55508
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Engine_exhaust1_frames_1
+      name: Muzzle_flashes_1
       rect:
         serializedVersion: 2
-        x: 28
-        y: 0
-        width: 28
-        height: 91
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+        x: 194
+        y: 179
+        width: 42
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 844f12cf8f6bd1445bb436b340e5aadd
+      spriteID: 7f7496996761daf439724ae9cfe412c8
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Engine_exhaust1_frames_2
-      rect:
-        serializedVersion: 2
-        x: 56
-        y: 0
-        width: 28
-        height: 91
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 490398ec48830d94683d7db3fb268096
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Engine_exhaust1_frames_3
-      rect:
-        serializedVersion: 2
-        x: 84
-        y: 0
-        width: 28
-        height: 91
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 17a8d3db590d3874aafc12fc7577af93
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Engine_exhaust1_frames_4
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 0
-        width: 28
-        height: 91
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cd50b3259ecd2344e971a84d37558cfb
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Engine_exhaust1_frames_5
-      rect:
-        serializedVersion: 2
-        x: 140
-        y: 0
-        width: 28
-        height: 91
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9357ef4749cd1a245b41442b5f1621c9
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Engine_exhaust1_frames_6
+      name: Muzzle_flashes_2
       rect:
         serializedVersion: 2
         x: 168
-        y: 0
-        width: 28
-        height: 91
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+        y: 185
+        width: 21
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ce6b2ea18d0ac9428be2808f3cb8692
+      spriteID: 85fb25bf32640e34d823a6a1e42d4d7f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Engine_exhaust1_frames_7
+      name: Muzzle_flashes_3
       rect:
         serializedVersion: 2
-        x: 196
-        y: 0
-        width: 28
-        height: 91
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+        x: 133
+        y: 185
+        width: 35
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35d5afc2c72202f47ac7dc960f6a63b7
+      spriteID: 40158f16daf637241bf6b109401cf014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muzzle_flashes_4
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 102
+        width: 77
+        height: 66
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 025c2e621e3f6274cb90cfc6f8cb5ce3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muzzle_flashes_5
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 108
+        width: 22
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c1d38470095a9e4c8a873e85a642f6f
       vertices: []
       indices: 
       edges: []
@@ -265,7 +223,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 96d3cf5d79fc7814f897f724a5486f2d
+    spriteID: 43f1136a21a86e0488a3a4cc4a78fefb
     vertices: []
     indices: 
     edges: []
