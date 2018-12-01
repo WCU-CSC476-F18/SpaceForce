@@ -4,17 +4,18 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 
-    float moveSpeed = 5f;
-
+    public float moveSpeed = 25f;
+    public bool canMove = true;
 
     public void Update()
     {
-        Move();
+        if(canMove)
+            Move();
     }
 
     public void Move()
     {
-        var keyBoardX = Input.GetAxis("Horizontal")* Time.deltaTime*moveSpeed;
+        var keyBoardX = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;
         var xPos = transform.position.x + keyBoardX;
         var keyBoardY = Input.GetAxis("Vertical") * Time.deltaTime * moveSpeed;
         var yPos = transform.position.y + keyBoardY;
