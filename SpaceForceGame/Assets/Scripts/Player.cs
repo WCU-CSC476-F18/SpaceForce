@@ -60,7 +60,11 @@ public class Player : MonoBehaviour {
             }
         }
         else
-            muzzleFlash.SetActive(false);
+        {
+        muzzleFlash.SetActive(false);
+
+        }
+            
 
         // Calculate new location
         var keyBoardX = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;

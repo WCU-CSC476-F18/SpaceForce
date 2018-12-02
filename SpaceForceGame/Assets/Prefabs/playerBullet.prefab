@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212682724395111072}
   - component: {fileID: 70913431706481072}
   - component: {fileID: 50709965862435070}
+  - component: {fileID: 114545577466815392}
   m_Layer: 0
   m_Name: playerBullet
   m_TagString: Untagged
@@ -77,6 +78,19 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.005}
   m_Size: {x: 0.2, y: 0.24}
   m_Direction: 0
+--- !u!114 &114545577466815392
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1009326418164530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a58ea2f142f9d043b8cab2ead3951df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 15
+  lifetime: 3
 --- !u!212 &212682724395111072
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -109,8 +123,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 701876361
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300026, guid: 8fcc5d18bd545834e859d847f779e10d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
