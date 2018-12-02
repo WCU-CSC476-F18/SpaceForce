@@ -18,7 +18,7 @@ public class Enemy : MonoBehaviour {
     public float bulletSpeed = 30f; // speed of bullets
      ///////////////////////////////////////////////////
 
-    int count = 0;
+  
     public void Start()
     {
         wayPoints = config.GetWayPoints();
