@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour {
+    public Config config;
     public List<Transform> wayPoints;
     public float moveSpeed = 2f;
     int wayPointIndex = 0;
@@ -11,6 +12,7 @@ public class Enemy : MonoBehaviour {
 
     public void Start()
     {
+        wayPoints = config.GetWayPoints();
         transform.position = wayPoints[wayPointIndex].transform.position;
     }
 
