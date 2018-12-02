@@ -16,9 +16,9 @@ public class Enemy : MonoBehaviour {
     public float shieldHealth = 50;
     public GameObject bullet;
     public float bulletSpeed = 30f; // speed of bullets
-     ///////////////////////////////////////////////////
+    /// ////////////////////////////////////////////////
+    
 
-    int count = 0;
     public void Start()
     {
         wayPoints = config.GetWayPoints();
@@ -38,21 +38,21 @@ public class Enemy : MonoBehaviour {
         // Handles user movement and firing
 
         // Listen for player input and FIRE
-
-       
-        if (!hasFired)
-        { 
-            fire();
-            Invoke("resetFire", 2f);
-            hasFired = true;
+        if (Input.GetButton("Fire1"))
+        {
+            muzzleFlash.SetActive(true);
+            if (!hasFired)
+            {
+                fire();
+                Invoke("resetFire", 0.1f);
+                hasFired = true;
+            }
         }
-
-
-
-
-
-
-
+        else
+        {
+             muzzleFlash.SetActive(false);
+        }
+           
 
         if (wayPointIndex <= wayPoints.Count - 1)
         {
@@ -70,16 +70,10 @@ public class Enemy : MonoBehaviour {
             Destroy(gameObject);
         }
     }
-
-    private void resetFire()
-    {
-        hasFired = false;
-    }
     private void fire()
     {
         GameObject shot = Instantiate(bullet, muzzleFlash.transform.position, bullet.transform.rotation);
         Rigidbody2D rb = shot.GetComponent<Rigidbody2D>();
-        rb.velocity = new Vector2(0, -bulletSpeed);
-       
+        rb.velocity = new Vector2(0, bulletSpeed);
     }
 }

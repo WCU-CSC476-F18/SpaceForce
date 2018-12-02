@@ -11,11 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 588a80606515dee4bbef1ef7b8d9e9d0, type: 3}
   m_Name: Config 1
   m_EditorClassIdentifier: 
-  enemyShipPrefab: {fileID: 1534446164491664, guid: 24488466050683743bc8e31458e2ed39,
+  enemyShipPrefab: {fileID: 1627753011579308, guid: 9c2e291c00c4ddf44b8823f8472a1d7a,
     type: 2}
   enemyMovingPrefab: {fileID: 1791171791376202, guid: d595048c8ed0e744ea937d15c3bf0d2d,
     type: 2}
-  timeBetweenShip: 1
+  timeBetweenShip: 0.5
   shipRandomFactor: 0.3
   numberOfEnemyShip: 5
   moveSpeed: 2
