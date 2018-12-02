@@ -28,11 +28,14 @@ public class Player : MonoBehaviour {
 
     int _currentState = STATE_IDLE;
 
+
+
     private void Start()
     {
         animator = this.transform.Find("Ship").gameObject.GetComponent<Animator>();
         exhaust = this.transform.Find("Exhaust").gameObject;
         muzzleFlash = this.transform.Find("MuzzleFlash").gameObject;
+       
     }
 
     public void Update()
@@ -116,4 +119,6 @@ public class Player : MonoBehaviour {
         Rigidbody2D rb = shot.GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2(0, bulletSpeed);
     }
+
+
 }
