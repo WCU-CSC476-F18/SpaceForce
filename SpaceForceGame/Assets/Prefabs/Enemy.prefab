@@ -24,10 +24,10 @@ GameObject:
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4126113954822222
 Transform:
   m_ObjectHideFlags: 1
@@ -58,6 +58,10 @@ MonoBehaviour:
   - {fileID: 4088034929805156, guid: d595048c8ed0e744ea937d15c3bf0d2d, type: 2}
   - {fileID: 4731143310101260, guid: d595048c8ed0e744ea937d15c3bf0d2d, type: 2}
   moveSpeed: 5
+  canMove: 1
+  shieldHealth: 50
+  bullet: {fileID: 1009326418164530, guid: b73ae7a004268774fa25ec158ac5635f, type: 2}
+  bulletSpeed: 30
 --- !u!212 &212183928844641766
 SpriteRenderer:
   m_ObjectHideFlags: 1

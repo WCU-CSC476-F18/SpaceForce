@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 588a80606515dee4bbef1ef7b8d9e9d0, type: 3}
   m_Name: Config 2
   m_EditorClassIdentifier: 
-  enemyShipPrefab: {fileID: 1678730816543122, guid: df49b886f0f29dd4b87853d4958589f0,
+  enemyShipPrefab: {fileID: 1627753011579308, guid: 9c2e291c00c4ddf44b8823f8472a1d7a,
     type: 2}
   enemyMovingPrefab: {fileID: 1800342063117972, guid: f7545b2888304234882d7b289fabfcb2,
     type: 2}

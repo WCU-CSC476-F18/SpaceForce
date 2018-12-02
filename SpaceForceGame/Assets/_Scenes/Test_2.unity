@@ -325,7 +325,7 @@ MonoBehaviour:
   moveSpeed: 15
   canMove: 1
   shieldHealth: 100
-  bullet: {fileID: 0}
+  bullet: {fileID: 1009326418164530, guid: b73ae7a004268774fa25ec158ac5635f, type: 2}
   bulletSpeed: 30
 --- !u!4 &181717494
 Transform:
