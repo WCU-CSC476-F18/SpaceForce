@@ -5,12 +5,12 @@ using UnityEngine;
 
 [CreateAssetMenu(menuName ="Enemy Config")]
 public class Config : ScriptableObject {
-    [SerializeField] GameObject enemyShipPrefab;
-    [SerializeField] GameObject enemyMovingPrefab;
-    [SerializeField] float timeBetweenShip = 1f;
-    [SerializeField] float shipRandomFactor = 0.3f;
-    [SerializeField] int numberOfEnemyShip = 4;
-    [SerializeField]  float moveSpeed = 10f;
+    public GameObject enemyShipPrefab;
+    public GameObject enemyMovingPrefab;
+    public float timeBetweenShip = 1f;
+    public float shipRandomFactor = 0.3f;
+    public int numberOfEnemyShip = 4;
+    public float moveSpeed = 10f;
 
     public GameObject GetEnemyShipPrefab()
     {
