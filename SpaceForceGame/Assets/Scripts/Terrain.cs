@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Terrain : MonoBehaviour {
-
+    // This behavior is shared by ground terrain, clouds, and stars, to enable constant movement
     public bool isMoving = true;
     public float speed = 10f;
 	
