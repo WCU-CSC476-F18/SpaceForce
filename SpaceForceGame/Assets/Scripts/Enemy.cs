@@ -18,6 +18,9 @@ public class Enemy : MonoBehaviour {
     public float bulletSpeed = 30f; // speed of bullets
      ///////////////////////////////////////////////////
 
+     //sound
+    public AudioClip shootSound;
+
   
     public void Start()
     {
@@ -80,6 +83,7 @@ public class Enemy : MonoBehaviour {
         GameObject shot = Instantiate(bullet, muzzleFlash.transform.position, bullet.transform.rotation);
         Rigidbody2D rb = shot.GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2(0, -bulletSpeed);
-       
+        AudioSource.PlayClipAtPoint(shootSound, Camera.main.transform.position);
+
     }
 }

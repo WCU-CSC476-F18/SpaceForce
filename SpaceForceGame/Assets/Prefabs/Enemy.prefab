@@ -111,6 +111,7 @@ MonoBehaviour:
   shieldHealth: 50
   bullet: {fileID: 1009326418164530, guid: b73ae7a004268774fa25ec158ac5635f, type: 2}
   bulletSpeed: 30
+  shootSound: {fileID: 8300000, guid: 0a3400d7fee7d2e439cc73bfd32b4a76, type: 3}
 --- !u!212 &212309248725239774
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -144,7 +145,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 701876361
-  m_SortingLayer: 2
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300022, guid: 8fcc5d18bd545834e859d847f779e10d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
