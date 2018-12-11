@@ -19,8 +19,13 @@ public class Clouds : MonoBehaviour {
     public Vector3 startPosition = new Vector3(0f, 15f, -0.5f);
     public float xVariance = 5.0f;  // maximum x distance from center a cloud can spawn
 
-	// Use this for initialization
-	void Start () {
+    public GameObject stars;    // Holds a prefab for producing stars
+    public float starDelay = 2.0f;
+    public Vector3 starStartPosition = new Vector3(-7.5f, 15f, -1.5f); // Prefab is centered on the left star field
+    public float maxStarOffset = 5.0f;  // The furthest to the left of start the starfield will spawn
+
+    // Use this for initialization
+    void Start () {
         if (cloudsOn)
             MakeCloud();
 	}
@@ -43,10 +48,22 @@ public class Clouds : MonoBehaviour {
         minDelay = endDelay;
         maxDelay = endDelay;
         Invoke("KillClouds",endTime);
+
+        MakeStars();
     }
 
     public void KillClouds() //Terminates clouds
     {
         cloudsOn = false;
+    }
+
+    public void MakeStars()
+    {
+        Vector3 position = starStartPosition;
+        position.x += Random.Range(0f,maxStarOffset);
+        Instantiate(stars, position, stars.transform.rotation);
+
+        // Once we start making stars, we keep making them forever
+        Invoke("MakeStars", starDelay);
     }
 }

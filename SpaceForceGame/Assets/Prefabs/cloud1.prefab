@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4076465314169204}
   - component: {fileID: 212131005652128358}
   - component: {fileID: 114380801938597956}
+  - component: {fileID: 114802110593055110}
   m_Layer: 0
   m_Name: cloud1
   m_TagString: Untagged
@@ -54,6 +55,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMoving: 1
   speed: 15
+--- !u!114 &114802110593055110
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1512214967295666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a58ea2f142f9d043b8cab2ead3951df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  lifetime: 5
 --- !u!212 &212131005652128358
 SpriteRenderer:
   m_ObjectHideFlags: 1

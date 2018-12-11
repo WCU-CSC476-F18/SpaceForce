@@ -259,7 +259,7 @@ MonoBehaviour:
   shieldHealth: 100
   bullet: {fileID: 1009326418164530, guid: b73ae7a004268774fa25ec158ac5635f, type: 2}
   bulletSpeed: 30
-  shootSound: {fileID: 8300000, guid: 38cce1e4b570a2540a61d50ecac2dc78, type: 3}
+  shootSound: {fileID: 8300000, guid: 6ed8cb2f00207104aa3b35703f0f038e, type: 3}
 --- !u!212 &212111871862371628
 SpriteRenderer:
   m_ObjectHideFlags: 1

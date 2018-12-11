@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4912747578261138}
   - component: {fileID: 212941357773950342}
   - component: {fileID: 114628257454588676}
+  - component: {fileID: 114003351784103344}
   m_Layer: 0
   m_Name: cloud3
   m_TagString: Untagged
@@ -41,6 +42,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114003351784103344
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1535841424719064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a58ea2f142f9d043b8cab2ead3951df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  lifetime: 5
 --- !u!114 &114628257454588676
 MonoBehaviour:
   m_ObjectHideFlags: 1
