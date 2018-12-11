@@ -9,13 +9,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 588a80606515dee4bbef1ef7b8d9e9d0, type: 3}
-  m_Name: Config 2
+  m_Name: Config 4
   m_EditorClassIdentifier: 
-  enemyShipPrefab: {fileID: 1534446164491664, guid: 24488466050683743bc8e31458e2ed39,
+  enemyShipPrefab: {fileID: 1534446164491664, guid: 913004e244e648f48b5d945050d77dd5,
     type: 2}
   enemyMovingPrefab: {fileID: 1800342063117972, guid: f7545b2888304234882d7b289fabfcb2,
     type: 2}
   timeBetweenShip: 1
   shipRandomFactor: 0.3
-  numberOfEnemyShip: 5
-  moveSpeed: 2
+  numberOfEnemyShip: 4
+  moveSpeed: 3

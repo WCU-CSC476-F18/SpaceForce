@@ -13,9 +13,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyShipPrefab: {fileID: 1534446164491664, guid: 24488466050683743bc8e31458e2ed39,
     type: 2}
-  enemyMovingPrefab: {fileID: 1800342063117972, guid: f7545b2888304234882d7b289fabfcb2,
+  enemyMovingPrefab: {fileID: 1791171791376202, guid: d595048c8ed0e744ea937d15c3bf0d2d,
     type: 2}
   timeBetweenShip: 1
   shipRandomFactor: 0.3
-  numberOfEnemyShip: 5
-  moveSpeed: 5
+  numberOfEnemyShip: 1
+  moveSpeed: 4

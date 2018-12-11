@@ -17,5 +17,5 @@ MonoBehaviour:
     type: 2}
   timeBetweenShip: 1
   shipRandomFactor: 0.3
-  numberOfEnemyShip: 5
-  moveSpeed: 2
+  numberOfEnemyShip: 2
+  moveSpeed: 6
