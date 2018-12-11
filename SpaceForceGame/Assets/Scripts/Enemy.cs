@@ -5,7 +5,6 @@ using UnityEngine;
 public class Enemy : MonoBehaviour {
     public Config config;
     public List<Transform> wayPoints;
-    public float moveSpeed = 2f;
     int wayPointIndex = 0;
 
     //code from martinel////////////////////////////////
@@ -36,6 +35,11 @@ public class Enemy : MonoBehaviour {
             MoveEnemy();
     }
 
+    public void SetConfig(Config setConfig)
+    {
+        this.config = setConfig;
+    }
+
     public void MoveEnemy()
     {
         // Handles user movement and firing
@@ -60,7 +64,7 @@ public class Enemy : MonoBehaviour {
         if (wayPointIndex <= wayPoints.Count - 1)
         {
             var targetPosition = wayPoints[wayPointIndex].transform.position;
-            var movementThisObject = moveSpeed * Time.deltaTime;
+            var movementThisObject = config.GetMoveSpeed() * Time.deltaTime;
             transform.position = Vector2.MoveTowards(transform.position, targetPosition, movementThisObject);
 
             if (transform.position == targetPosition)

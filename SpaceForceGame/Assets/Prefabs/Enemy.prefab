@@ -106,7 +106,6 @@ MonoBehaviour:
   - {fileID: 4839930097116036, guid: f7545b2888304234882d7b289fabfcb2, type: 2}
   - {fileID: 4166576780535168, guid: f7545b2888304234882d7b289fabfcb2, type: 2}
   - {fileID: 4595251916865588, guid: f7545b2888304234882d7b289fabfcb2, type: 2}
-  moveSpeed: 2
   canMove: 1
   shieldHealth: 50
   bullet: {fileID: 1009326418164530, guid: b73ae7a004268774fa25ec158ac5635f, type: 2}
@@ -193,7 +192,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9bc5dd7e24f98f54d80e6f42a142953e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e048570e9512893409ba2ae14c0a338d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

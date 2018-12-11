@@ -4,20 +4,30 @@ using UnityEngine;
 
 public class EnemySpawn : MonoBehaviour {
     public List<Config> configs;
-    int startConfig = 0;
+    public int startConfig = 0;
 
     public void Start()
     {
-        var currentConfig = configs[startConfig];
-        StartCoroutine(SpawnAllEnemyInConfig(currentConfig));
+        StartCoroutine(SpawnAllEnemy());
+        
+    }
+    private IEnumerator SpawnAllEnemy()
+    {
+        for(int Index = startConfig; Index< configs.Count; Index++)
+        {
+            var currentConfig = configs[Index];
+            yield return StartCoroutine(SpawnAllEnemyInConfig(currentConfig));
+        }
     }
     private IEnumerator SpawnAllEnemyInConfig(Config config)
     {
         for(int enemyCount=0;enemyCount< config.GetNumberOfEnemyShip();enemyCount++)
         {
-        Instantiate(config.GetEnemyShipPrefab(), config.GetWayPoints()[0].transform.position,
+
+            var newEnemy = Instantiate(config.GetEnemyShipPrefab(), config.GetWayPoints()[0].transform.position,
             Quaternion.identity);
-        yield return new WaitForSeconds(config.GetTimeBetweenShip());
+            newEnemy.GetComponent<Enemy>().SetConfig(config);
+            yield return new WaitForSeconds(config.GetTimeBetweenShip());
         }
 
 
