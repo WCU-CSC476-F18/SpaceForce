@@ -185,7 +185,7 @@ GameObject:
   - component: {fileID: 117851586}
   - component: {fileID: 117851588}
   - component: {fileID: 117851587}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ship
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -279,7 +279,7 @@ GameObject:
   - component: {fileID: 181717494}
   - component: {fileID: 181717493}
   - component: {fileID: 181717492}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -295,10 +295,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.010719262, y: -0.058956146}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -309,7 +309,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6, y: 1.5}
+  m_Size: {x: 0.38561428, y: 1.3820877}
   m_EdgeRadius: 0
 --- !u!114 &181717493
 MonoBehaviour:
@@ -343,7 +343,7 @@ Transform:
   - {fileID: 1455473261}
   - {fileID: 538233569}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &538233568
 GameObject:
@@ -355,7 +355,7 @@ GameObject:
   - component: {fileID: 538233569}
   - component: {fileID: 538233571}
   - component: {fileID: 538233570}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MuzzleFlash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -490,7 +490,7 @@ GameObject:
   m_Component:
   - component: {fileID: 724670982}
   - component: {fileID: 724670983}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -666,6 +666,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9e3821fabd09c34458d91c4d966debef, type: 2}
   - {fileID: 11400000, guid: 98b5d55fd896fef4bb5599c259810d59, type: 2}
   startConfig: 0
+  loop: 1
 --- !u!4 &1398634721
 Transform:
   m_ObjectHideFlags: 0
@@ -689,7 +690,7 @@ GameObject:
   - component: {fileID: 1455473261}
   - component: {fileID: 1455473263}
   - component: {fileID: 1455473262}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Exhaust
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -810,7 +811,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4683683816727486, guid: d595048c8ed0e744ea937d15c3bf0d2d, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d595048c8ed0e744ea937d15c3bf0d2d, type: 2}

@@ -128,5 +128,22 @@ public class Player : MonoBehaviour {
         AudioSource.PlayClipAtPoint(shootSound, Camera.main.transform.position);
     }
 
+      private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Bullet damage = collision.gameObject.GetComponent<Bullet>();
+        CheckHit(damage);
+    }
+
+    private void CheckHit(Bullet damage)
+    {
+        shieldHealth -= damage.GetDamage();
+        damage.goodbye();
+        if (shieldHealth <= 0)
+        {
+            Destroy(gameObject);
+
+        }
+    }
+
 
 }

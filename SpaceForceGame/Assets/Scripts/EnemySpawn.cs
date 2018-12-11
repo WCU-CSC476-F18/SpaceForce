@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemySpawn : MonoBehaviour {
     public List<Config> configs;
     public int startConfig = 0;
-    public bool loop = false;
+    public bool loop = true;
 
     public IEnumerator Start()
     {

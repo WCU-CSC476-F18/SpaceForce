@@ -5,16 +5,21 @@ using UnityEngine;
 public class Bullet : MonoBehaviour {
     // This script can be applied to anything that needs to do damage, or disappear after a set lifetime
 
-    public float damage = 15f;      // amount of damage projectile can do
+    public int damage = 15;      // amount of damage projectile can do
     public float lifetime = 3f;    // time, in seconds, projectile can live
 
-    void Start()
+    public void Start()
     {
         Invoke("goodbye", lifetime);
     }
 
-    void goodbye()
+   public void goodbye()
     {
         Destroy(this.gameObject);
+    }
+
+    public int GetDamage()
+    {
+        return damage;
     }
 }

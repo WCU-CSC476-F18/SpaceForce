@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4907622901497250}
   - component: {fileID: 212381017690135794}
   - component: {fileID: 95901079817936952}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MuzzleFlash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4564526964501482}
   - component: {fileID: 114135387470611740}
   - component: {fileID: 61639651922357872}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 4071090550406692}
   - component: {fileID: 212111871862371628}
   - component: {fileID: 95956342708602818}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ship
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4642598272584510}
   - component: {fileID: 212610244562464606}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 4464785979977310}
   - component: {fileID: 212916868528810590}
   - component: {fileID: 95912819474860658}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Exhaust
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,7 +173,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

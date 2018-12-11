@@ -19,13 +19,19 @@ public class Enemy : MonoBehaviour {
 
      //sound
     public AudioClip shootSound;
+    //shotcounter
+    public float shotCounter;
+    public float minTimeBetweenShot = 0.2f;
+    public float maxTimeBetweenShot = 5f;
 
   
     public void Start()
     {
         wayPoints = config.GetWayPoints();
         transform.position = wayPoints[wayPointIndex].transform.position;
+        shotCounter = Random.Range(minTimeBetweenShot, maxTimeBetweenShot);
         muzzleFlash = this.transform.Find("MuzzleFlash").gameObject;
+        
 
     }
 
@@ -33,12 +39,14 @@ public class Enemy : MonoBehaviour {
     {
         if (canMove)
             MoveEnemy();
+        
     }
 
     public void SetConfig(Config setConfig)
     {
         this.config = setConfig;
     }
+
 
     public void MoveEnemy()
     {
@@ -50,7 +58,7 @@ public class Enemy : MonoBehaviour {
         if (!hasFired)
         { 
             fire();
-            Invoke("resetFire", 2f);
+            Invoke("resetFire", shotCounter);
             hasFired = true;
         }
 
@@ -89,5 +97,22 @@ public class Enemy : MonoBehaviour {
         rb.velocity = new Vector2(0, -bulletSpeed);
         AudioSource.PlayClipAtPoint(shootSound, Camera.main.transform.position);
 
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Bullet damage = collision.gameObject.GetComponent<Bullet>();
+        CheckHit(damage);
+    }
+
+    private void CheckHit(Bullet damage)
+    {
+        shieldHealth -= damage.GetDamage();
+        damage.goodbye();
+        if (shieldHealth <= 0)
+        {
+            Destroy(gameObject);
+
+        }
     }
 }

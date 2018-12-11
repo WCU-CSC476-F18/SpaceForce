@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4686380571300332}
   - component: {fileID: 212309248725239774}
   - component: {fileID: 95409319572789896}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MuzzleFlash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,8 @@ GameObject:
   - component: {fileID: 4693825887717422}
   - component: {fileID: 212340491531130770}
   - component: {fileID: 114676778761174262}
-  m_Layer: 0
+  - component: {fileID: 61162979635032088}
+  m_Layer: 9
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65,13 +66,38 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1534446164491664}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.8400002, y: 3.98, z: 0}
+  m_LocalPosition: {x: 0.17489146, y: -3.041462, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4686380571300332}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &61162979635032088
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1534446164491664}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.03658378}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.7066667, y: 1.7066667}
+    newSize: {x: 2.6533334, y: 1.5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.80392075, y: 2.1575644}
+  m_EdgeRadius: 0
 --- !u!95 &95409319572789896
 Animator:
   serializedVersion: 3
@@ -108,9 +134,12 @@ MonoBehaviour:
   - {fileID: 4595251916865588, guid: f7545b2888304234882d7b289fabfcb2, type: 2}
   canMove: 1
   shieldHealth: 50
-  bullet: {fileID: 1009326418164530, guid: b73ae7a004268774fa25ec158ac5635f, type: 2}
+  bullet: {fileID: 1858261046701944, guid: a9d6ae5939807e44bb69e5f60a39a781, type: 2}
   bulletSpeed: 30
   shootSound: {fileID: 8300000, guid: 0a3400d7fee7d2e439cc73bfd32b4a76, type: 3}
+  shotCounter: 0
+  minTimeBetweenShot: 0.2
+  maxTimeBetweenShot: 3
 --- !u!212 &212309248725239774
 SpriteRenderer:
   m_ObjectHideFlags: 1
