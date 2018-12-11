@@ -5,11 +5,14 @@ using UnityEngine;
 public class EnemySpawn : MonoBehaviour {
     public List<Config> configs;
     public int startConfig = 0;
+    public bool loop = false;
 
-    public void Start()
+    public IEnumerator Start()
     {
-        StartCoroutine(SpawnAllEnemy());
-        
+        do
+        {
+            yield return StartCoroutine(SpawnAllEnemy());
+        } while (loop);
     }
     private IEnumerator SpawnAllEnemy()
     {
