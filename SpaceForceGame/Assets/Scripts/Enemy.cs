@@ -20,6 +20,7 @@ public class Enemy : MonoBehaviour {
 
      //sound
     public AudioClip shootSound;
+    public AudioClip enemyDeathSound;
     //shotcounter
     public float shotCounter;
     public float minTimeBetweenShot = 0.2f;
@@ -96,7 +97,7 @@ public class Enemy : MonoBehaviour {
         GameObject shot = Instantiate(Bullet, muzzleFlash.transform.position, Bullet.transform.rotation);
         Rigidbody2D rb = shot.GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2(0, -bulletSpeed);
-        AudioSource.PlayClipAtPoint(shootSound, Camera.main.transform.position);
+        AudioSource.PlayClipAtPoint(shootSound, Camera.main.transform.position,0.1f);
 
     }
 
@@ -112,8 +113,14 @@ public class Enemy : MonoBehaviour {
         damage.goodbye();
         if (shieldHealth <= 0)
         {
-            Instantiate(Explosion,transform.position,transform.rotation);
-            Destroy(gameObject);
+            EnemyDie();
         }
+    }
+
+    private void EnemyDie()
+    {
+        Instantiate(Explosion, transform.position, transform.rotation);
+        Destroy(gameObject);
+        AudioSource.PlayClipAtPoint(enemyDeathSound,Camera.main.transform.position);
     }
 }

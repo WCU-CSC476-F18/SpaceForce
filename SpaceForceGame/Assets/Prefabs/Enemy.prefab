@@ -138,6 +138,7 @@ MonoBehaviour:
   Explosion: {fileID: 1253673219212902, guid: 24d65b72b75ae1443ba865042186de89, type: 2}
   bulletSpeed: 30
   shootSound: {fileID: 8300000, guid: 0a3400d7fee7d2e439cc73bfd32b4a76, type: 3}
+  enemyDeathSound: {fileID: 8300000, guid: e0453ab6007c5d14a8872cfeaa5b61cc, type: 3}
   shotCounter: 0
   minTimeBetweenShot: 0.2
   maxTimeBetweenShot: 3

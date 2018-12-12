@@ -30,6 +30,9 @@ public class Player : MonoBehaviour {
 
     //sound
     public AudioClip shootSound;
+    public GameObject Explosion;
+    public AudioClip playerDeathSound;
+
 
 
 
@@ -125,7 +128,7 @@ public class Player : MonoBehaviour {
         GameObject shot = Instantiate(bullet, muzzleFlash.transform.position, bullet.transform.rotation);
         Rigidbody2D rb = shot.GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2(0, bulletSpeed);
-        AudioSource.PlayClipAtPoint(shootSound, Camera.main.transform.position);
+        AudioSource.PlayClipAtPoint(shootSound, Camera.main.transform.position,0.1f);
     }
 
       private void OnTriggerEnter2D(Collider2D collision)
@@ -140,9 +143,16 @@ public class Player : MonoBehaviour {
         damage.goodbye();
         if (shieldHealth <= 0)
         {
-            Destroy(gameObject);
+            PlayerDie();
 
         }
+    }
+
+    private void PlayerDie()
+    {
+        Instantiate(Explosion, transform.position, transform.rotation);
+        Destroy(gameObject);
+        AudioSource.PlayClipAtPoint(playerDeathSound, Camera.main.transform.position);
     }
 
 

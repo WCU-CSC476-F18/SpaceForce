@@ -260,6 +260,8 @@ MonoBehaviour:
   bullet: {fileID: 1009326418164530, guid: b73ae7a004268774fa25ec158ac5635f, type: 2}
   bulletSpeed: 30
   shootSound: {fileID: 8300000, guid: 6ed8cb2f00207104aa3b35703f0f038e, type: 3}
+  Explosion: {fileID: 1253673219212902, guid: 24d65b72b75ae1443ba865042186de89, type: 2}
+  playerDeathSound: {fileID: 8300000, guid: d822948887168784cbff60d2c1746edd, type: 3}
 --- !u!212 &212111871862371628
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -433,7 +435,7 @@ SpriteRenderer:
   m_SortingLayerID: 701876361
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7a3cc792ee44ccf4b96d9b9643868670, type: 3}
+  m_Sprite: {fileID: 21300012, guid: 7a3cc792ee44ccf4b96d9b9643868670, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
