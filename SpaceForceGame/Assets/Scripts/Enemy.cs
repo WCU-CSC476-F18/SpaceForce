@@ -13,7 +13,8 @@ public class Enemy : MonoBehaviour {
 
     public bool canMove = true;
     public float shieldHealth = 50;
-    public GameObject bullet;
+    public GameObject Bullet;
+    public GameObject Explosion;
     public float bulletSpeed = 30f; // speed of bullets
      ///////////////////////////////////////////////////
 
@@ -92,7 +93,7 @@ public class Enemy : MonoBehaviour {
     }
     private void fire()
     {
-        GameObject shot = Instantiate(bullet, muzzleFlash.transform.position, bullet.transform.rotation);
+        GameObject shot = Instantiate(Bullet, muzzleFlash.transform.position, Bullet.transform.rotation);
         Rigidbody2D rb = shot.GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2(0, -bulletSpeed);
         AudioSource.PlayClipAtPoint(shootSound, Camera.main.transform.position);
@@ -111,8 +112,8 @@ public class Enemy : MonoBehaviour {
         damage.goodbye();
         if (shieldHealth <= 0)
         {
+            Instantiate(Explosion,transform.position,transform.rotation);
             Destroy(gameObject);
-
         }
     }
 }

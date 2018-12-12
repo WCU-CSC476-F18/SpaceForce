@@ -20,7 +20,7 @@ public class Clouds : MonoBehaviour {
     public float xVariance = 5.0f;  // maximum x distance from center a cloud can spawn
 
     public GameObject stars;    // Holds a prefab for producing stars
-    public float starDelay = 2.0f;
+    public float starDelay = .05f;
     public Vector3 starStartPosition = new Vector3(-7.5f, 15f, -1.5f); // Prefab is centered on the left star field
     public float maxStarOffset = 5.0f;  // The furthest to the left of start the starfield will spawn
 

@@ -66,7 +66,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1534446164491664}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.17489146, y: -3.041462, z: 0}
+  m_LocalPosition: {x: 7.415552, y: -1.7316232, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4686380571300332}
@@ -89,7 +89,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.7066667, y: 1.7066667}
+    oldSize: {x: 2.56, y: 2.56}
     newSize: {x: 2.6533334, y: 1.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -134,7 +134,8 @@ MonoBehaviour:
   - {fileID: 4595251916865588, guid: f7545b2888304234882d7b289fabfcb2, type: 2}
   canMove: 1
   shieldHealth: 50
-  bullet: {fileID: 1858261046701944, guid: a9d6ae5939807e44bb69e5f60a39a781, type: 2}
+  Bullet: {fileID: 1858261046701944, guid: a9d6ae5939807e44bb69e5f60a39a781, type: 2}
+  Explosion: {fileID: 1253673219212902, guid: 24d65b72b75ae1443ba865042186de89, type: 2}
   bulletSpeed: 30
   shootSound: {fileID: 8300000, guid: 0a3400d7fee7d2e439cc73bfd32b4a76, type: 3}
   shotCounter: 0
@@ -218,8 +219,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1804840719
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e048570e9512893409ba2ae14c0a338d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
