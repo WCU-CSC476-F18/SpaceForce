@@ -31,6 +31,7 @@ public class EnemySpawn : MonoBehaviour {
             Quaternion.identity);
             newEnemy.GetComponent<Enemy>().SetConfig(config);
             yield return new WaitForSeconds(config.GetTimeBetweenShip());
+
         }
 
 
