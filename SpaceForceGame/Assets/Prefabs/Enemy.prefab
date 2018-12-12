@@ -176,6 +176,8 @@ MonoBehaviour:
   shotCounter: 0
   minTimeBetweenShot: 0.2
   maxTimeBetweenShot: 3
+  shootHitExplosion: {fileID: 1216767582031296, guid: 67e85f943a767b749971b1a06f1ce65a,
+    type: 2}
 --- !u!212 &212309248725239774
 SpriteRenderer:
   m_ObjectHideFlags: 1

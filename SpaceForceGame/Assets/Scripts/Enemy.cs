@@ -25,8 +25,10 @@ public class Enemy : MonoBehaviour {
     public float shotCounter;
     public float minTimeBetweenShot = 0.2f;
     public float maxTimeBetweenShot = 5f;
+    //explosion
+    public GameObject shootHitExplosion;
 
-  
+
     public void Start()
     {
         wayPoints = config.GetWayPoints();
@@ -111,6 +113,7 @@ public class Enemy : MonoBehaviour {
     private void CheckHit(Damage damage)
     {
         shieldHealth -= damage.GetDamage();
+        Instantiate(shootHitExplosion, transform.position, transform.rotation);
         damage.Hit();
         if (shieldHealth <= 0)
         {
