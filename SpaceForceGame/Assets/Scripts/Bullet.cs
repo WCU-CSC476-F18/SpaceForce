@@ -15,7 +15,7 @@ public class Bullet : MonoBehaviour {
 
    public void goodbye()
     {
-        Destroy(this.gameObject);
+        Destroy(gameObject);
     }
 
     public int GetDamage()

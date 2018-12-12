@@ -103,19 +103,21 @@ public class Enemy : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Bullet damage = collision.gameObject.GetComponent<Bullet>();
+        Damage damage = collision.gameObject.GetComponent<Damage>();
         CheckHit(damage);
+       
     }
 
-    private void CheckHit(Bullet damage)
+    private void CheckHit(Damage damage)
     {
         shieldHealth -= damage.GetDamage();
-        damage.goodbye();
+        damage.Hit();
         if (shieldHealth <= 0)
         {
             EnemyDie();
         }
     }
+
 
     private void EnemyDie()
     {
