@@ -265,6 +265,7 @@ MonoBehaviour:
   maxTimeBetweenShot: 3
   shootHitExplosion: {fileID: 1216767582031296, guid: 67e85f943a767b749971b1a06f1ce65a,
     type: 2}
+  pointScore1: 10
 --- !u!114 &114844690236374048
 MonoBehaviour:
   m_ObjectHideFlags: 1

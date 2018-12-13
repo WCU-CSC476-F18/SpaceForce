@@ -248,6 +248,7 @@ MonoBehaviour:
   maxTimeBetweenShot: 9999
   shootHitExplosion: {fileID: 1216767582031296, guid: 67e85f943a767b749971b1a06f1ce65a,
     type: 2}
+  pointScore1: 5
 --- !u!212 &212017228271838624
 SpriteRenderer:
   m_ObjectHideFlags: 1

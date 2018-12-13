@@ -14,8 +14,6 @@ public class Player : MonoBehaviour {
     const float THRUST_HALF = 0.5f;
     const float THRUST_OFF = 0.25f;
 
-    const float respawnTime = 5f;
-
     private Vector2 bounds = new Vector2(7.2f,9.1f);
     Animator animator;
     GameObject exhaust;
@@ -30,6 +28,7 @@ public class Player : MonoBehaviour {
     public float bulletSpeed = 30f; // speed of bullets
     public float shieldTime = 0.5f; // time to display shield
     public int lives = 3;
+    public float respawnTime = 5f;
 
     int _currentState = STATE_IDLE;
 
@@ -80,42 +79,48 @@ public class Player : MonoBehaviour {
         muzzleFlash.SetActive(false);
 
         }
-            
 
-        // Calculate new location
-        var keyBoardX = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;
-        var xPos = transform.position.x + keyBoardX;
-        var keyBoardY = Input.GetAxis("Vertical") * Time.deltaTime * moveSpeed;
-        var yPos = transform.position.y + keyBoardY;
-
-        // Play Right/Left banking animation
-        if (Input.GetAxisRaw("Horizontal") > 0)
-            setState(STATE_RIGHT);
-        else if (Input.GetAxisRaw("Horizontal") < 0)
-            setState(STATE_LEFT);
+        if (Application.platform == RuntimePlatform.Android)
+        {
+            transform.position = Input.mousePosition;
+        }
         else
-            setState(STATE_IDLE);
+        {
+            // Calculate new location
+            var keyBoardX = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;
+            var xPos = transform.position.x + keyBoardX;
+            var keyBoardY = Input.GetAxis("Vertical") * Time.deltaTime * moveSpeed;
+            var yPos = transform.position.y + keyBoardY;
 
-        // Increase/Decrease thrust
-        if (Input.GetAxisRaw("Vertical") > 0)
-            exhaust.transform.localScale = new Vector3(1, THRUST_FULL, 1);
-        else if (Input.GetAxisRaw("Vertical") < 0)
-            exhaust.transform.localScale = new Vector3(1, THRUST_OFF, 1);
-        else
-            exhaust.transform.localScale = new Vector3(1, THRUST_HALF, 1);
+            // Play Right/Left banking animation
+            if (Input.GetAxisRaw("Horizontal") > 0)
+                setState(STATE_RIGHT);
+            else if (Input.GetAxisRaw("Horizontal") < 0)
+                setState(STATE_LEFT);
+            else
+                setState(STATE_IDLE);
 
-        // Don't leave the play field
-        if (xPos > bounds.x)
-            xPos = bounds.x;
-        else if (xPos < -bounds.x)
-            xPos = -bounds.x;
-        if (yPos > bounds.y)
-            yPos = bounds.y;
-        else if (yPos < -bounds.y)
-            yPos = -bounds.y;
+            // Increase/Decrease thrust
+            if (Input.GetAxisRaw("Vertical") > 0)
+                exhaust.transform.localScale = new Vector3(1, THRUST_FULL, 1);
+            else if (Input.GetAxisRaw("Vertical") < 0)
+                exhaust.transform.localScale = new Vector3(1, THRUST_OFF, 1);
+            else
+                exhaust.transform.localScale = new Vector3(1, THRUST_HALF, 1);
 
-        // Update location
-        transform.position = new Vector2(xPos, yPos);
+            // Don't leave the play field
+            if (xPos > bounds.x)
+                xPos = bounds.x;
+            else if (xPos < -bounds.x)
+                xPos = -bounds.x;
+            if (yPos > bounds.y)
+                yPos = bounds.y;
+            else if (yPos < -bounds.y)
+                yPos = -bounds.y;
+
+            // Update location
+            transform.position = new Vector2(xPos, yPos);
+        }
     }
 
     // Helper function for playing animations via state change
@@ -155,7 +160,6 @@ public class Player : MonoBehaviour {
         if (shieldHealth < 0)
         {
             PlayerDie();
-            FindObjectOfType<SceneModes>().GameOverScene();
         }
         else
         {
@@ -177,6 +181,7 @@ public class Player : MonoBehaviour {
             lives--;
             Invoke("respawn", respawnTime);
         }
+        else FindObjectOfType<SceneModes>().GameOverScene();
     }
 
     private void hideShield()

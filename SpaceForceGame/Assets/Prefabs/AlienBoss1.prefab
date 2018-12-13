@@ -415,6 +415,7 @@ MonoBehaviour:
   - {fileID: 1549470589955654}
   - {fileID: 1479869408467694}
   - {fileID: 1615078268157748}
+  isBoss: 1
   shootSound: {fileID: 8300000, guid: 38cce1e4b570a2540a61d50ecac2dc78, type: 3}
   enemyDeathSound: {fileID: 8300000, guid: 31e13d824b4352f4ea11771535e0f78e, type: 3}
   shotCounter: 0
@@ -422,6 +423,7 @@ MonoBehaviour:
   maxTimeBetweenShot: 1
   shootHitExplosion: {fileID: 1216767582031296, guid: 67e85f943a767b749971b1a06f1ce65a,
     type: 2}
+  pointScore1: 1000
 --- !u!212 &212105514941112278
 SpriteRenderer:
   m_ObjectHideFlags: 1

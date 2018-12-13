@@ -26,6 +26,7 @@ public class Enemy : MonoBehaviour {
     // IF YOU USE THIS, MAKE SURE YOU HAVE AT LEAST ONE MUZZLE FLASH FOR EACH BULLET TYPE
     private int bulletIndex = 0;
     ///////////////////////////////////////////////////
+    public bool isBoss = false;
 
     //sound
     public AudioClip shootSound;
@@ -147,6 +148,8 @@ public class Enemy : MonoBehaviour {
         Instantiate(Explosion, transform.position, transform.rotation);
         Destroy(gameObject);
         AudioSource.PlayClipAtPoint(enemyDeathSound,Camera.main.transform.position);
+        if(isBoss)
+            FindObjectOfType<SceneModes>().WinScene();
     }
 
     private void killFlash()
