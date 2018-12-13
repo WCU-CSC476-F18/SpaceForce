@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4564526964501482}
   - component: {fileID: 114135387470611740}
   - component: {fileID: 61639651922357872}
-  - component: {fileID: 114736535126917848}
+  - component: {fileID: 114002499216144210}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -244,6 +244,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114002499216144210
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1240140815765408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a58ea2f142f9d043b8cab2ead3951df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 15
+  lifetime: 2000
 --- !u!114 &114135387470611740
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -263,18 +276,7 @@ MonoBehaviour:
   shootSound: {fileID: 8300000, guid: 6ed8cb2f00207104aa3b35703f0f038e, type: 3}
   Explosion: {fileID: 1253673219212902, guid: 24d65b72b75ae1443ba865042186de89, type: 2}
   playerDeathSound: {fileID: 8300000, guid: d822948887168784cbff60d2c1746edd, type: 3}
---- !u!114 &114736535126917848
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1240140815765408}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0b57b9991d34a548a8a6a9107d13a78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 50
+  shootHitExplosion: {fileID: 0}
 --- !u!212 &212111871862371628
 SpriteRenderer:
   m_ObjectHideFlags: 1
