@@ -374,6 +374,8 @@ MonoBehaviour:
   shootSound: {fileID: 8300000, guid: 6ed8cb2f00207104aa3b35703f0f038e, type: 3}
   Explosion: {fileID: 1253673219212902, guid: 24d65b72b75ae1443ba865042186de89, type: 2}
   playerDeathSound: {fileID: 8300000, guid: d822948887168784cbff60d2c1746edd, type: 3}
+  shootHitExplosion: {fileID: 1216767582031296, guid: 67e85f943a767b749971b1a06f1ce65a,
+    type: 2}
 --- !u!4 &47674031
 Transform:
   m_ObjectHideFlags: 0
@@ -400,10 +402,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 47674028}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0b57b9991d34a548a8a6a9107d13a78, type: 3}
+  m_Script: {fileID: 11500000, guid: 1a58ea2f142f9d043b8cab2ead3951df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 50
+  damage: 15
+  lifetime: 2000
 --- !u!1 &334635386
 GameObject:
   m_ObjectHideFlags: 0

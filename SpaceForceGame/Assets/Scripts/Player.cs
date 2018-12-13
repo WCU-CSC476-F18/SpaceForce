@@ -32,6 +32,8 @@ public class Player : MonoBehaviour {
     public AudioClip shootSound;
     public GameObject Explosion;
     public AudioClip playerDeathSound;
+    //explosion
+    public GameObject shootHitExplosion;
 
 
 
@@ -133,14 +135,15 @@ public class Player : MonoBehaviour {
 
       private void OnTriggerEnter2D(Collider2D collision)
     {
-        Damage damage = collision.gameObject.GetComponent<Damage>();
+        Bullet damage = collision.gameObject.GetComponent<Bullet>();
         CheckHit(damage);
     }
 
-    private void CheckHit(Damage damage)
+    private void CheckHit(Bullet damage)
     {
         shieldHealth -= damage.GetDamage();
-        damage.Hit();
+        Instantiate(shootHitExplosion, transform.position, transform.rotation);
+        damage.goodbye();
         if (shieldHealth <= 0)
         {
             PlayerDie();

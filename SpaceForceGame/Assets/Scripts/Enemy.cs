@@ -105,16 +105,16 @@ public class Enemy : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Damage damage = collision.gameObject.GetComponent<Damage>();
+        Bullet damage = collision.gameObject.GetComponent<Bullet>();
         CheckHit(damage);
        
     }
 
-    private void CheckHit(Damage damage)
+    private void CheckHit(Bullet damage)
     {
         shieldHealth -= damage.GetDamage();
         Instantiate(shootHitExplosion, transform.position, transform.rotation);
-        damage.Hit();
+        damage.goodbye();
         if (shieldHealth <= 0)
         {
             EnemyDie();

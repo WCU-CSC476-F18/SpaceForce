@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 114676778761174262}
   - component: {fileID: 61670659648950622}
   - component: {fileID: 50178392453090806}
-  - component: {fileID: 114102494150476664}
+  - component: {fileID: 114840310773542670}
   m_Layer: 9
   m_Name: Enemy 1
   m_TagString: Untagged
@@ -138,18 +138,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114102494150476664
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1534446164491664}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0b57b9991d34a548a8a6a9107d13a78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 100
 --- !u!114 &114676778761174262
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -178,6 +166,19 @@ MonoBehaviour:
   maxTimeBetweenShot: 3
   shootHitExplosion: {fileID: 1216767582031296, guid: 67e85f943a767b749971b1a06f1ce65a,
     type: 2}
+--- !u!114 &114840310773542670
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1534446164491664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a58ea2f142f9d043b8cab2ead3951df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 100
+  lifetime: 60
 --- !u!212 &212309248725239774
 SpriteRenderer:
   m_ObjectHideFlags: 1
