@@ -18,6 +18,7 @@ public class Player : MonoBehaviour {
     Animator animator;
     GameObject exhaust;
     GameObject muzzleFlash;
+    GameObject shield;
     private bool hasFired = false;
 
     public float moveSpeed = 15f;
@@ -25,6 +26,7 @@ public class Player : MonoBehaviour {
     public float shieldHealth = 100;
     public GameObject bullet;
     public float bulletSpeed = 30f; // speed of bullets
+    public float shieldTime = 0.5f; // time to display shield
 
     int _currentState = STATE_IDLE;
 
@@ -43,6 +45,7 @@ public class Player : MonoBehaviour {
         animator = this.transform.Find("Ship").gameObject.GetComponent<Animator>();
         exhaust = this.transform.Find("Exhaust").gameObject;
         muzzleFlash = this.transform.Find("MuzzleFlash").gameObject;
+        shield = this.transform.Find("Shield").gameObject;
        
     }
 
@@ -144,10 +147,14 @@ public class Player : MonoBehaviour {
         shieldHealth -= damage.GetDamage();
         Instantiate(shootHitExplosion, transform.position, transform.rotation);
         damage.goodbye();
-        if (shieldHealth <= 0)
+        if (shieldHealth < 0)
         {
             PlayerDie();
-
+        }
+        else
+        {
+            shield.SetActive(true);
+            Invoke("hideShield",shieldTime);
         }
     }
 
@@ -159,5 +166,9 @@ public class Player : MonoBehaviour {
         AudioSource.PlayClipAtPoint(playerDeathSound, Camera.main.transform.position);
     }
 
+    private void hideShield()
+    {
+        shield.SetActive(false);
+    }
 
 }
