@@ -363,7 +363,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4284293878190760, guid: 01f957d9cf1dc4145a00fc68d6779736, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2570
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4074545853686802, guid: 01f957d9cf1dc4145a00fc68d6779736, type: 2}
       propertyPath: m_LocalPosition.y
@@ -385,6 +385,38 @@ Prefab:
       value: 
       objectReference: {fileID: 1889463035745748, guid: 9de118bf12fb2954ebfc728121f96569,
         type: 2}
+    - target: {fileID: 4104480588643580, guid: 01f957d9cf1dc4145a00fc68d6779736, type: 2}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4475601125125542, guid: 01f957d9cf1dc4145a00fc68d6779736, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4654928053650120, guid: 01f957d9cf1dc4145a00fc68d6779736, type: 2}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4617232189126798, guid: 01f957d9cf1dc4145a00fc68d6779736, type: 2}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4843072821572954, guid: 01f957d9cf1dc4145a00fc68d6779736, type: 2}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4758743519283234, guid: 01f957d9cf1dc4145a00fc68d6779736, type: 2}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4020945702799496, guid: 01f957d9cf1dc4145a00fc68d6779736, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4020945702799496, guid: 01f957d9cf1dc4145a00fc68d6779736, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01f957d9cf1dc4145a00fc68d6779736, type: 2}
   m_IsPrefabAsset: 0

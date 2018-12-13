@@ -261,7 +261,7 @@ MonoBehaviour:
   bullet: {fileID: 1009326418164530, guid: b73ae7a004268774fa25ec158ac5635f, type: 2}
   bulletSpeed: 30
   shootSound: {fileID: 8300000, guid: 6ed8cb2f00207104aa3b35703f0f038e, type: 3}
-  Explosion: {fileID: 1253673219212902, guid: 24d65b72b75ae1443ba865042186de89, type: 2}
+  Explosion: {fileID: 1475557788252808, guid: f9375d1811f017941b873caac63d060e, type: 2}
   playerDeathSound: {fileID: 8300000, guid: d822948887168784cbff60d2c1746edd, type: 3}
 --- !u!114 &114736535126917848
 MonoBehaviour:

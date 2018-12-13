@@ -7,13 +7,21 @@ public class EnemySpawn : MonoBehaviour {
     public int startConfig = 0;
     public bool loop = true;
 
-    public IEnumerator Start()
+    public IEnumerator OnTriggerEnter2D(Collider2D collision)
     {
         do
         {
             yield return StartCoroutine(SpawnAllEnemy());
         } while (loop);
     }
+
+    //public IEnumerator Start()
+    //{
+    //    do
+    //    {
+    //        yield return StartCoroutine(SpawnAllEnemy());
+    //    } while (loop);
+    //}
     private IEnumerator SpawnAllEnemy()
     {
         for(int Index = startConfig; Index< configs.Count; Index++)
