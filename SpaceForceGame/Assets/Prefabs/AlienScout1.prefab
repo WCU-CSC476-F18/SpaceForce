@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 50743464077663572}
   m_Layer: 9
   m_Name: AlienScout1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -239,6 +239,8 @@ MonoBehaviour:
   Bullet: {fileID: 0}
   Explosion: {fileID: 1206323491459938, guid: fd85e8d84fe724e419ff17e8595e960d, type: 2}
   bulletSpeed: 30
+  BulletList: []
+  FlashList: []
   shootSound: {fileID: 0}
   enemyDeathSound: {fileID: 8300000, guid: eea5a4c5e7b712b43bee46f6acdbec5b, type: 3}
   shotCounter: 0

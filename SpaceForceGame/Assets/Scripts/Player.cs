@@ -14,6 +14,8 @@ public class Player : MonoBehaviour {
     const float THRUST_HALF = 0.5f;
     const float THRUST_OFF = 0.25f;
 
+    const float respawnTime = 5f;
+
     private Vector2 bounds = new Vector2(7.2f,9.1f);
     Animator animator;
     GameObject exhaust;
@@ -27,6 +29,7 @@ public class Player : MonoBehaviour {
     public GameObject bullet;
     public float bulletSpeed = 30f; // speed of bullets
     public float shieldTime = 0.5f; // time to display shield
+    public int lives = 3;
 
     int _currentState = STATE_IDLE;
 
@@ -37,7 +40,8 @@ public class Player : MonoBehaviour {
     //explosion
     public GameObject shootHitExplosion;
 
-
+    private Transform defaultTransform;
+    private float defaultHealth;
 
 
     private void Start()
@@ -46,7 +50,8 @@ public class Player : MonoBehaviour {
         exhaust = this.transform.Find("Exhaust").gameObject;
         muzzleFlash = this.transform.Find("MuzzleFlash").gameObject;
         shield = this.transform.Find("Shield").gameObject;
-       
+        defaultTransform = this.transform;
+        defaultHealth = this.shieldHealth;
     }
 
     public void Update()
@@ -147,12 +152,10 @@ public class Player : MonoBehaviour {
         shieldHealth -= damage.GetDamage();
         Instantiate(shootHitExplosion, transform.position, transform.rotation);
         damage.goodbye();
-        if (shieldHealth <= 0)
+        if (shieldHealth < 0)
         {
             PlayerDie();
             FindObjectOfType<SceneModes>().GameOverScene();
-
-
         }
         else
         {
@@ -165,8 +168,15 @@ public class Player : MonoBehaviour {
     private void PlayerDie()
     {
         Instantiate(Explosion, transform.position, transform.rotation);
-        Destroy(gameObject);
+        //Destroy(gameObject);
+        gameObject.SetActive(false);
         AudioSource.PlayClipAtPoint(playerDeathSound, Camera.main.transform.position);
+
+        if (lives > 0)
+        {
+            lives--;
+            Invoke("respawn", respawnTime);
+        }
     }
 
     private void hideShield()
@@ -174,4 +184,10 @@ public class Player : MonoBehaviour {
         shield.SetActive(false);
     }
 
+    private void respawn()
+    {
+        this.transform.position = defaultTransform.position;
+        this.shieldHealth = defaultHealth;
+        this.gameObject.SetActive(true);
+    }
 }

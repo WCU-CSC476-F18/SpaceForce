@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 588a80606515dee4bbef1ef7b8d9e9d0, type: 3}
+  m_Name: Frigate5
+  m_EditorClassIdentifier: 
+  enemyShipPrefab: {fileID: 1160292114872740, guid: a8ec6fe44075ea34189a43b27a025713,
+    type: 2}
+  enemyMovingPrefab: {fileID: 1784583272865550, guid: bc4584924f8e8364286143cf08e5ea29,
+    type: 2}
+  enemyMovingList:
+  - {fileID: 1784583272865550, guid: bc4584924f8e8364286143cf08e5ea29, type: 2}
+  - {fileID: 1494586508978762, guid: a06b9bfe88423eb43922c862a621e199, type: 2}
+  - {fileID: 1192958965003954, guid: 9861fa1dccd56294699c48237bc907b3, type: 2}
+  - {fileID: 1569864548343308, guid: b595a912f77f6da4eb4fcf5f24089d7a, type: 2}
+  - {fileID: 1271839027627786, guid: 7c6606d8a8ba9f749b48cacccfd47004, type: 2}
+  - {fileID: 1128270857010366, guid: 63e13cd2219b8a94084df75c1f882185, type: 2}
+  - {fileID: 1579727623195734, guid: 768f70e9a8a353648890f64cb8c9fdf3, type: 2}
+  - {fileID: 1241998524346128, guid: 7c927c9f1cbb329469f8bd87baf6dd03, type: 2}
+  - {fileID: 1669538536730358, guid: 199c75c7f7aa4f244a73ebd80a194173, type: 2}
+  - {fileID: 1617270600875626, guid: 9e736f7f8aca58b4081792a7084248d0, type: 2}
+  - {fileID: 1587999848178114, guid: d85ef2435f631fe4c9a0acffe8cde902, type: 2}
+  useList: 1
+  timeBetweenShip: 1
+  numberOfEnemyShip: 4
+  moveSpeed: 5

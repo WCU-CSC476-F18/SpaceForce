@@ -10,12 +10,18 @@ public class Bullet : MonoBehaviour {
 
     public void Start()
     {
-        Invoke("goodbye", lifetime);
+        Invoke("expire", lifetime);
     }
 
-   public void goodbye()
+    public void goodbye()
     {
-        Destroy(gameObject);
+        if(this.tag != "Player" && this.tag != "Enemy") Destroy(gameObject);
+    }
+
+    public void expire()
+    {
+        // This allows enemies to disappear after leaving the screen
+        if (this.tag != "Player") Destroy(gameObject);
     }
 
     public int GetDamage()

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour {
+    const float bottomBoundary = -12f;
+
     public Config config;
     public List<Transform> wayPoints;
     int wayPointIndex = 0;
@@ -18,9 +20,14 @@ public class Enemy : MonoBehaviour {
     public GameObject Bullet;
     public GameObject Explosion;
     public float bulletSpeed = 30f; // speed of bullets
-     ///////////////////////////////////////////////////
 
-     //sound
+    public GameObject[] BulletList; // optional list of bullet objects for larger enemies with multiple guns
+    public GameObject[] FlashList;
+    // IF YOU USE THIS, MAKE SURE YOU HAVE AT LEAST ONE MUZZLE FLASH FOR EACH BULLET TYPE
+    private int bulletIndex = 0;
+    ///////////////////////////////////////////////////
+
+    //sound
     public AudioClip shootSound;
     public AudioClip enemyDeathSound;
     //shotcounter
@@ -61,21 +68,20 @@ public class Enemy : MonoBehaviour {
 
         // Listen for player input and FIRE
 
-       
+
+        // handle the muzzle flash and fire if possible
         if (!hasFired && canFire)
         {
-            muzzleFlash.SetActive(true);
+            if (BulletList.Length > 0 && bulletIndex < BulletList.Length && bulletIndex < FlashList.Length)
+            {
+                FlashList[bulletIndex].SetActive(true);
+            }
+            else muzzleFlash.SetActive(true);
             fire();
             Invoke("resetFire", shotCounter);
             Invoke("killFlash", flashTime);
             hasFired = true;
         }
-
-
-
-
-
-
 
 
         if (wayPointIndex <= wayPoints.Count - 1)
@@ -91,7 +97,8 @@ public class Enemy : MonoBehaviour {
         }
         else
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
+            wayPointIndex = 1;
         }
     }
 
@@ -101,11 +108,18 @@ public class Enemy : MonoBehaviour {
     }
     private void fire()
     {
-        GameObject shot = Instantiate(Bullet, muzzleFlash.transform.position, Bullet.transform.rotation);
-        Rigidbody2D rb = shot.GetComponent<Rigidbody2D>();
-        rb.velocity = new Vector2(0, -bulletSpeed);
-        AudioSource.PlayClipAtPoint(shootSound, Camera.main.transform.position,0.1f);
-
+        if (transform.position.y > bottomBoundary)
+        {
+            GameObject shot;
+            if (BulletList.Length > 0 && bulletIndex < BulletList.Length && bulletIndex < FlashList.Length)
+            {
+                shot = Instantiate(BulletList[bulletIndex], FlashList[bulletIndex].transform.position, Bullet.transform.rotation);
+            }
+            else shot = Instantiate(Bullet, muzzleFlash.transform.position, Bullet.transform.rotation);
+            Rigidbody2D rb = shot.GetComponent<Rigidbody2D>();
+            rb.velocity = new Vector2(0, -bulletSpeed);
+            AudioSource.PlayClipAtPoint(shootSound, Camera.main.transform.position, 0.1f);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -118,7 +132,7 @@ public class Enemy : MonoBehaviour {
     private void CheckHit(Bullet damage)
     {
         shieldHealth -= damage.GetDamage();
-        Instantiate(shootHitExplosion, transform.position, transform.rotation);
+        Instantiate(shootHitExplosion, damage.transform.position, damage.transform.rotation);
         damage.goodbye();
         if (shieldHealth <= 0)
         {
@@ -137,6 +151,13 @@ public class Enemy : MonoBehaviour {
 
     private void killFlash()
     {
-        muzzleFlash.SetActive(false);
+        if (BulletList.Length > 0 && bulletIndex < BulletList.Length && bulletIndex < FlashList.Length)
+        {
+            FlashList[bulletIndex].SetActive(false);
+            bulletIndex++;
+            if (bulletIndex >= BulletList.Length)
+                bulletIndex = 0;
+        }
+        else muzzleFlash.SetActive(false);
     }
 }
