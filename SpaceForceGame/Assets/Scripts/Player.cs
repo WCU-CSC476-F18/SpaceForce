@@ -147,9 +147,12 @@ public class Player : MonoBehaviour {
         shieldHealth -= damage.GetDamage();
         Instantiate(shootHitExplosion, transform.position, transform.rotation);
         damage.goodbye();
-        if (shieldHealth < 0)
+        if (shieldHealth <= 0)
         {
             PlayerDie();
+            FindObjectOfType<SceneModes>().GameOverScene();
+
+
         }
         else
         {

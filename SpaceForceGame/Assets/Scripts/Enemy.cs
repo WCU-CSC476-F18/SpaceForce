@@ -29,7 +29,8 @@ public class Enemy : MonoBehaviour {
     public float maxTimeBetweenShot = 5f;
     //explosion
     public GameObject shootHitExplosion;
-
+    //addScore
+    public int pointScore1 = 1;
 
     public void Start()
     {
@@ -122,6 +123,7 @@ public class Enemy : MonoBehaviour {
         if (shieldHealth <= 0)
         {
             EnemyDie();
+            FindObjectOfType<ConnectObjects>().AddToScore(pointScore1);
         }
     }
 

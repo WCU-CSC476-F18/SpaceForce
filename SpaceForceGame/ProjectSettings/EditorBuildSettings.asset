@@ -5,10 +5,22 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 1
+    path: Assets/_Scenes/StartScreen.unity
+    guid: 4fedccc13260f074fb0e28656e88b77d
+  - enabled: 1
+    path: Assets/_Scenes/CombindTest2.unity
+    guid: 8e8e45f53c3ab9a429162622654da717
+  - enabled: 1
+    path: Assets/_Scenes/GameOverScreen.unity
+    guid: 76c38e36d95d51643ba5a706586a91e7
   - enabled: 0
     path: Assets/_Scenes/Level 1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/_Scenes/Gilbert_test2.unity
     guid: 16c3fb4f480450144a736d5ae29556aa
+  - enabled: 1
+    path: Assets/_Scenes/WinScreen.unity
+    guid: c7456bb97215eff42af2ed3584b8d397
   m_configObjects: {}
