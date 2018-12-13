@@ -16,6 +16,5 @@ MonoBehaviour:
   enemyMovingPrefab: {fileID: 1791171791376202, guid: d595048c8ed0e744ea937d15c3bf0d2d,
     type: 2}
   timeBetweenShip: 1
-  shipRandomFactor: 0.3
   numberOfEnemyShip: 1
   moveSpeed: 4

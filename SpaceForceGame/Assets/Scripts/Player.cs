@@ -147,6 +147,7 @@ public class Player : MonoBehaviour {
         if (shieldHealth <= 0)
         {
             PlayerDie();
+            FindObjectOfType<SceneModes>().GameOverScene();
 
         }
     }
@@ -157,6 +158,7 @@ public class Player : MonoBehaviour {
         Instantiate(Explosion, transform.position, transform.rotation);
         Destroy(gameObject);
         AudioSource.PlayClipAtPoint(playerDeathSound, Camera.main.transform.position);
+       
     }
 
 

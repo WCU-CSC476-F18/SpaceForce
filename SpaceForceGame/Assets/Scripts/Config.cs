@@ -8,7 +8,6 @@ public class Config : ScriptableObject {
     public GameObject enemyShipPrefab;
     public GameObject enemyMovingPrefab;
     public float timeBetweenShip = 1f;
-    public float shipRandomFactor = 0.3f;
     public int numberOfEnemyShip = 4;
     public float moveSpeed = 10f;
 
@@ -36,10 +35,6 @@ public class Config : ScriptableObject {
         return timeBetweenShip;
     }
 
-    public float GetShipRandomFactor()
-    {
-        return shipRandomFactor;
-    }
 
     public int GetNumberOfEnemyShip()
     {
