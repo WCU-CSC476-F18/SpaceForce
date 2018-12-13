@@ -9,12 +9,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 588a80606515dee4bbef1ef7b8d9e9d0, type: 3}
-  m_Name: ScoutWave
+  m_Name: Frigate2
   m_EditorClassIdentifier: 
-  enemyShipPrefab: {fileID: 1387136850304378, guid: 3e410fbe10d70284e9668e949ef28f6f,
+  enemyShipPrefab: {fileID: 1035683226429094, guid: a26a53caf39c3f144b0ddb97cbab7abf,
     type: 2}
-  enemyMovingPrefab: {fileID: 1983449889355750, guid: 7ab203d22ff16d149acbe51a1389bc4d,
+  enemyMovingPrefab: {fileID: 1364151454274076, guid: 96cfbd8a0df614847aa21df061e3dc7c,
     type: 2}
-  timeBetweenShip: 0.1
-  numberOfEnemyShip: 8
-  moveSpeed: 15
+  timeBetweenShip: 1
+  numberOfEnemyShip: 1
+  moveSpeed: 10
