@@ -39,7 +39,7 @@ public class Player : MonoBehaviour {
     //explosion
     public GameObject shootHitExplosion;
 
-    private Transform defaultTransform;
+    private Vector3 defaultPosition;
     private float defaultHealth;
 
 
@@ -49,7 +49,7 @@ public class Player : MonoBehaviour {
         exhaust = this.transform.Find("Exhaust").gameObject;
         muzzleFlash = this.transform.Find("MuzzleFlash").gameObject;
         shield = this.transform.Find("Shield").gameObject;
-        defaultTransform = this.transform;
+        defaultPosition = this.transform.position;
         defaultHealth = this.shieldHealth;
     }
 
@@ -191,7 +191,7 @@ public class Player : MonoBehaviour {
 
     private void respawn()
     {
-        this.transform.position = defaultTransform.position;
+        this.transform.position = defaultPosition;
         this.shieldHealth = defaultHealth;
         this.gameObject.SetActive(true);
     }
