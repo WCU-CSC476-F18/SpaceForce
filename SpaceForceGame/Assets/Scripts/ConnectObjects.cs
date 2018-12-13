@@ -7,11 +7,11 @@ public class ConnectObjects : MonoBehaviour {
   
     public void Awake()
     {
-       
-        SetUpLoopLoad();
+        DontDestroyOnLoad(gameObject);
+      //  SetUpLoopLoad();
     }
 
-    
+    /*
     public void SetUpLoopLoad()
     {
         int numConnObjects = FindObjectsOfType<ConnectObjects>().Length;
@@ -24,7 +24,7 @@ public class ConnectObjects : MonoBehaviour {
             DontDestroyOnLoad(gameObject);
         }
     }
-    
+    */
 
     public int GetScore()
     {
