@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour {
     private bool hasFired = false;
 
     public bool canMove = true;
+    public bool canFire = false;
     public float shieldHealth = 50;
     public float flashTime = 0.2f;
     public GameObject Bullet;
@@ -35,7 +36,7 @@ public class Enemy : MonoBehaviour {
         wayPoints = config.GetWayPoints();
         transform.position = wayPoints[wayPointIndex].transform.position;
         shotCounter = Random.Range(minTimeBetweenShot, maxTimeBetweenShot);
-        muzzleFlash = this.transform.Find("MuzzleFlash").gameObject;
+        if(canFire) muzzleFlash = this.transform.Find("MuzzleFlash").gameObject;
         
 
     }
@@ -60,7 +61,7 @@ public class Enemy : MonoBehaviour {
         // Listen for player input and FIRE
 
        
-        if (!hasFired)
+        if (!hasFired && canFire)
         {
             muzzleFlash.SetActive(true);
             fire();

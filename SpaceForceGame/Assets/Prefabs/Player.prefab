@@ -276,7 +276,8 @@ MonoBehaviour:
   shootSound: {fileID: 8300000, guid: 6ed8cb2f00207104aa3b35703f0f038e, type: 3}
   Explosion: {fileID: 1475557788252808, guid: f9375d1811f017941b873caac63d060e, type: 2}
   playerDeathSound: {fileID: 8300000, guid: d822948887168784cbff60d2c1746edd, type: 3}
-  shootHitExplosion: {fileID: 0}
+  shootHitExplosion: {fileID: 1216767582031296, guid: 67e85f943a767b749971b1a06f1ce65a,
+    type: 2}
 --- !u!212 &212111871862371628
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 588a80606515dee4bbef1ef7b8d9e9d0, type: 3}
+  m_Name: ScoutWave
+  m_EditorClassIdentifier: 
+  enemyShipPrefab: {fileID: 1387136850304378, guid: 3e410fbe10d70284e9668e949ef28f6f,
+    type: 2}
+  enemyMovingPrefab: {fileID: 1983449889355750, guid: 7ab203d22ff16d149acbe51a1389bc4d,
+    type: 2}
+  timeBetweenShip: 0.1
+  numberOfEnemyShip: 16
+  moveSpeed: 15
