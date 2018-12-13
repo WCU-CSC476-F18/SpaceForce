@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour {
 
     public bool canMove = true;
     public float shieldHealth = 50;
+    public float flashTime = 0.2f;
     public GameObject Bullet;
     public GameObject Explosion;
     public float bulletSpeed = 30f; // speed of bullets
@@ -60,9 +61,11 @@ public class Enemy : MonoBehaviour {
 
        
         if (!hasFired)
-        { 
+        {
+            muzzleFlash.SetActive(true);
             fire();
             Invoke("resetFire", shotCounter);
+            Invoke("killFlash", flashTime);
             hasFired = true;
         }
 
@@ -127,5 +130,10 @@ public class Enemy : MonoBehaviour {
         Instantiate(Explosion, transform.position, transform.rotation);
         Destroy(gameObject);
         AudioSource.PlayClipAtPoint(enemyDeathSound,Camera.main.transform.position);
+    }
+
+    private void killFlash()
+    {
+        muzzleFlash.SetActive(false);
     }
 }

@@ -34,9 +34,9 @@ public class EnemySpawn : MonoBehaviour {
     {
         for(int enemyCount=0;enemyCount< config.GetNumberOfEnemyShip();enemyCount++)
         {
-
-            var newEnemy = Instantiate(config.GetEnemyShipPrefab(), config.GetWayPoints()[0].transform.position,
-            Quaternion.identity);
+            GameObject enemy = config.GetEnemyShipPrefab();
+            var newEnemy = Instantiate(enemy, config.GetWayPoints()[0].transform.position,
+            enemy.transform.rotation);
             newEnemy.GetComponent<Enemy>().SetConfig(config);
             yield return new WaitForSeconds(config.GetTimeBetweenShip());
 
