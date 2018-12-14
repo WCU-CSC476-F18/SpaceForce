@@ -82,7 +82,10 @@ public class Player : MonoBehaviour {
 
         if (Application.platform == RuntimePlatform.Android)
         {
-            transform.position = Input.mousePosition;
+            var v3 = Input.mousePosition;
+            v3.z = 10.0f;
+            v3 = Camera.main.ScreenToWorldPoint(v3);
+            transform.position = v3;
         }
         else
         {
